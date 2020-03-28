@@ -6,7 +6,7 @@ import SelectLang from '@/components/SelectLang';
 import logo from '../assets/logo.svg';
 import styles from './UserLayout.less';
 
-const UserLayout = props => {
+const UserLayout = (props) => {
   const {
     route = {
       routes: [],

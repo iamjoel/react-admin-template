@@ -6,13 +6,14 @@ import Avatar from './AvatarDropdown';
 import HeaderSearch from '../HeaderSearch';
 import SelectLang from '../SelectLang';
 import styles from './index.less';
+import NoticeIconView from './NoticeIconView';
 const ENVTagColor = {
   dev: 'orange',
   test: 'green',
   pre: '#87d068',
 };
 
-const GlobalHeaderRight = props => {
+const GlobalHeaderRight = (props) => {
   const { theme, layout } = props;
   let className = styles.right;
 
@@ -57,7 +58,8 @@ const GlobalHeaderRight = props => {
           <QuestionCircleOutlined />
         </a>
       </Tooltip>
-      <Avatar />
+      <NoticeIconView />
+      <Avatar menu />
       {REACT_APP_ENV && (
         <span>
           <Tag color={ENVTagColor[REACT_APP_ENV]}>{REACT_APP_ENV}</Tag>

@@ -20,7 +20,7 @@ function getModulePackageName(module) {
   return packageName;
 }
 
-const webpackPlugin = config => {
+const webpackPlugin = (config) => {
   // optimize chunks
   config.optimization // share the same chunks across different modules
     .runtimeChunk(false)
@@ -31,7 +31,7 @@ const webpackPlugin = config => {
       minSize: 0,
       cacheGroups: {
         vendors: {
-          test: module => {
+          test: (module) => {
             const packageName = getModulePackageName(module) || '';
 
             if (packageName) {
