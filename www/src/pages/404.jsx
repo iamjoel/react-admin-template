@@ -1,18 +1,20 @@
-import { Button, Result } from 'antd';
+// 这个文件不能删，框架有依赖这个组件...
+import { Link } from 'umi';
+import { Result, Button } from 'antd';
 import React from 'react';
-import { history } from 'umi';
 
-const NoFoundPage = () => (
+export default () => (
   <Result
     status="404"
     title="404"
+    style={{
+      background: 'none',
+    }}
     subTitle="Sorry, the page you visited does not exist."
     extra={
-      <Button type="primary" onClick={() => history.push('/')}>
-        Back Home
-      </Button>
+      <Link to="/">
+        <Button type="primary">Back Home</Button>
+      </Link>
     }
   />
 );
-
-export default NoFoundPage;

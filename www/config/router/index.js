@@ -1,4 +1,11 @@
 import demoRouter from './demo'
 export default [
-  demoRouter
+  {
+    path: '/',
+    redirect: '/demo'
+  },
+  demoRouter,
+  {
+    component: '@/pages/exception/404',
+  },
 ]
