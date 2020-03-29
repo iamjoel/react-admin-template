@@ -18,5 +18,13 @@ npm build
 
 在 `/config/config.js` 的 routers 字段中配置。
 
+路由api用 umi 的[history](https://umijs.org/api#history)。如
+```js
+import { history } from 'umi'
+
+history.push('/list')
+history.goBack()
+```
+
 ## 框架
 * [Ant Design Pro 4.x](https://pro.ant.design/index-cn/)
